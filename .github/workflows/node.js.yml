@@ -31,5 +31,5 @@ jobs:
     - run: yarn add -D escope
       if: matrix.babel-eslint <= 6
     - run: yarn add -D estraverse-fb
-      if: matrix.babel-eslint == 4
+      if: matrix.babel-eslint >= 3 && matrix.babel-eslint <= 5
     - run: yarn test
