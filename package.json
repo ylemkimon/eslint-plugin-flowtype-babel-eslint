@@ -1,0 +1,10 @@
+{
+  "name": "eslint-plugin-flowtype-babel-eslint",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-plugin-flowtype": "^5.2.0"
+  }
+}
