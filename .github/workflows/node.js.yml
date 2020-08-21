@@ -29,7 +29,9 @@ jobs:
         yarn install
         yarn add -D babel-eslint@${{ matrix.babel-eslint }}
     - run: yarn add -D escope
-      if: matrix.babel-eslint <= 6
+      if: matrix.babel-eslint <= 6 && matrix.babel-eslint != 3
+    - run: yarn add -D escope@3.3.0
+      if: matrix.babel-eslint == 3
     - run: yarn add -D estraverse-fb
       if: matrix.babel-eslint >= 3 && matrix.babel-eslint <= 5
     - run: yarn test
