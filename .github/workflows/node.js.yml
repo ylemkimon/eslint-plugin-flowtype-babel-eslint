@@ -17,6 +17,7 @@ jobs:
     strategy:
       matrix:
         babel-eslint: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      fail-fast: false
 
     steps:
     - uses: actions/checkout@v2
@@ -29,4 +30,6 @@ jobs:
         yarn add -D babel-eslint@${{ matrix.babel-eslint }}
     - run: yarn add -D escope
       if: matrix.babel-eslint <= 6
+    - run: yarn add -D estraverse-fb
+      if: matrix.babel-eslint == 4
     - run: yarn test
